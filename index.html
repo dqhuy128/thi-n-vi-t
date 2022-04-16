@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+  <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="libs/wow/animate.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="home">
+  <div id="app">
+    <myheader></myheader>
+
+    <div id="js-margin-top">
+      <main>
+
+        <section class="banner">
+          <div class="image">
+            <img src="images/tnl/banner.png" alt="">
+          </div>
+        </section>
+
+        <section class="section-2">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6 mb-4 mb-lg-0 col-12">
+                <div class="image wow fadeInLeft">
+                  <img src="images/tnl/about-welcome-1.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="intro-desc wow fadeInRight">
+                  <h2 class="title">
+                    THIEN VIET <br /> SKILL LIMITED COMPANY
+                  </h2>
+                  <div class="sub-large">
+                    THIEN VIET SKILL LIMITED COMPANY
+                  </div>
+                  <p class="sub">
+                    Địa chỉ : Số 86, tổ 10 khu giãn dân Mậu Lương, Phường Kiến Hưng, Quận Hà Đông, Thành phố Hà Nội,
+                    Việt Nam
+                    <br />
+                    Số điện thoại : 024.6253.1720
+                    <br />
+                    Mã số thuế : 0107510250
+                  </p>
+                  <div class="sub-large">
+                    Tầm nhìn và Lĩnh vực hoạt động:
+                  </div>
+                  <p class="sub">
+                    Thiện Việt ra đời với khát vọng mang đến những kiến thức có giá trị, giúp cải thiện các kỹ năng –
+                    một trong những yếu tố quan trọng ảnh hưởng đến sự thành công của mỗi cá nhân và tổ chức.
+                  </p>
+                  <p class="sub">
+                    Với mong muốn lấy hiệu quả làm thước đo, cùng với mục tiêu đưa kiến thức và kỹ năng đúng nhu cầu –
+                    đủ trọng tâm – đảm bảo kết quả, Thiện Việt quan niệm rằng đào tạo không đơn thuần gói gọn trong một
+                    bài học mà là một quá trình hoàn chỉnh, thống nhất từ lúc tìm hiểu nhu cầu đào tạo riêng biệt của
+                    mỗi cá nhân, tổ chức, đến việc chọn lọc các yếu tố, phương pháp phù hợp và hiệu quả nhất, được áp
+                    dụng thông qua quá trình tiếp xúc và đào tạo….
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-5">
+          <div class="container">
+
+            <div class="head-title-component wow fadeInUp">
+              <h2 class="title text-dark off-text-shadow">
+                Những gì chúng tôi cung cấp
+              </h2>
+              <h3 class="sub-title text-red">
+                Phương pháp tốt nhất
+              </h3>
+            </div>
+
+            <div class="sync-slide wow fadeInDown">
+
+              <div class="primary-slide">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="(item,index) in 4">
+                      <img :src="'images/tnl/sv' + (index + 1) + '.jpg'" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <section class="section-6">
+          <div class="container">
+            <div class="head-title-component wow fadeInUp">
+              <h2 class="title text-dark off-text-shadow">
+                Kĩ năng về THIỆN VIỆT
+              </h2>
+            </div>
+
+            <div class="client-said wow fadeInDown">
+              <div class="client-said-js">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="(client,index) in clients" :key="index">
+                      <div class="client-item">
+                        <div class="content">
+                          <div class="desc">
+                            {{ client.desc }}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- navi -->
+                <div class="swiper-button-prev">
+                  <img src="images/nav-circle-left.png" alt="">
+                </div>
+                <div class="swiper-button-next">
+                  <img src="images/nav-circle-right.png" alt="">
+                </div>
+                <!-- pagi -->
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="section-7">
+          <div class="container">
+            <div class="head-title-component wow fadeInUp">
+              <h2 class="title text-dark off-text-shadow">
+                Dịch vụ
+              </h2>
+            </div>
+
+            <div class="list-item wow fadeInDown mt-4 mt-lg-5">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4" v-for="(item,index) in blog" :key="index">
+                  <div class="item">
+                    <div class="image">
+                      <img :src="item.image" alt="">
+                    </div>
+
+                    <div class="content">
+                      <h2 class="title">
+                        {{ item.title }}
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="section-8">
+          <div class="container">
+
+            <div class="head-title-component wow fadeInUp">
+              <h2 class="title text-dark off-text-shadow">
+                Đối tác
+              </h2>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper wow fadeInDown" id="clientSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="(item,index) in 5" :key="index">
+                  <div class="client-logo">
+                    <img :src=" 'images/tnl/logo' + (index + 1) + '.png' " alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <myfooter></myfooter>
+  </div>
+  <script src="js/vue.js"></script>
+  <script src="js/httpvueloader.js"></script>
+  <script src="libs/jquery/jquery.min.js"></script>
+  <script src="libs/bootstrap/bootstrap.min.js"></script>
+  <script src="libs/swiper/swiper-bundle.min.js"></script>
+  <script src="libs/wow/wow.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data() {
+        return {
+          clients: [
+            {
+              desc: 'Kỹ năng hoạch định & tổ chức công việc.',
+            },
+            {
+              desc: 'Kỹ năng ủy thác hiệu quả & tạo động lực làm việc.',
+            },
+            {
+              desc: 'Kỹ năng đàm phán thương lượng.',
+            },
+            {
+              desc: 'Phương pháp tư duy & kỹ năng giải quyết vấn đề.',
+            },
+            {
+              desc: 'Nâng cao năng lực quản trị dành cho Quản lý cấp trung.',
+            },
+            {
+              desc: 'Xây dựng và phát triển đội nhóm.',
+            },
+          ],
+          blog: [
+            {
+              image: 'images/tnl/blog.png',
+              title: 'Kỹ năng hoạch định & tổ chức công việc.',
+            },
+            {
+              image: 'images/tnl/blog1.png',
+              title: 'Kỹ năng ủy thác hiệu quả & tạo động lực làm việc.',
+            },
+            {
+              image: 'images/tnl/blog2.png',
+              title: 'Kỹ năng đàm phán thương lượng.',
+            },
+            {
+              image: 'images/tnl/blog3.png',
+              title: 'Phương pháp tư duy & kỹ năng giải quyết vấn đề.',
+            },
+            {
+              image: 'images/tnl/blog4.jpg',
+              title: 'Nâng cao năng lực quản trị dành cho Quản lý cấp trung.',
+            },
+            {
+              image: 'images/tnl/blog5.jpg',
+              title: 'Xây dựng và phát triển đội nhóm.',
+            },
+          ],
+        }
+      },
+      components: {
+        myheader: httpVueLoader('vue_components/header.vue'),
+        myfooter: httpVueLoader('vue_components/footer.vue'),
+      },
+      mounted() {
+        $(window).bind('load', function () {
+
+          var clientSwiper = new Swiper("#clientSwiper", {
+            autoplay: true,
+            breakpoints: {
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 10
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 15
+              },
+              1200: {
+                slidesPerView: 5,
+                spaceBetween: 20
+              },
+            }
+          });
+
+          // sync slide - section-5
+
+          var syncPrimary = new Swiper(".primary-slide .mySwiper", {
+            spaceBetween: 10,
+            autoplay: true,
+            navigation: {
+              nextEl: ".primary-slide .swiper-button-next",
+              prevEl: ".primary-slide .swiper-button-prev",
+            },
+          });
+
+          // khách hàng nói gì về chúng tôi - section-6
+          var clientSlide = new Swiper(".client-said-js .mySwiper", {
+            autoplay: true,
+            breakpoints: {
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+              },
+              576: {
+                slidesPerView: 2,
+                spaceBetween: 15
+              },
+              992: {
+                slidesPerView: 3,
+                spaceBetween: 15
+              },
+              1200: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              },
+            },
+            navigation: {
+              prevEl: ".client-said-js .swiper-button-prev",
+              nextEl: ".client-said-js .swiper-button-next",
+            },
+            pagination: {
+              el: ".client-said-js .swiper-pagination",
+              clickable: true
+            },
+          });
+        });
+      },
+    });
+  </script>
+</body>
+
+</html>
